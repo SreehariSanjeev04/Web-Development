@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="addyearbook.css">
+    <script src="yearbook.js"></script>
+    <style>
+        .signout {
+            position: absolute;
+            top: 3%;
+            right: 20px; /* Adjust as needed */
+            color: white;
+            text-decoration: none; /* Remove default underline */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('university.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            transition: padding 0.3s ease-in-out;
+        }
+
+        main {
+            padding: 20px;
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+
+        .students {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .milestone {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .milestone:hover {
+            transform: translateY(-5px);
+        }
+
+        .milestone h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .milestone img {
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .date {
+            font-style: italic;
+            color: #666;
+        }
+
+        .quote {
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .mile_stone{
+            position: absolute;
+            color: white;
+            top: 3%;
+            left: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Passouts</h1>
+        <a class="signout" href="main.html"><h4>Sign Out</h4></a>
+    </header>
+    <main>
+        <section class="students">
+            
+        </section>
+    </main>
+    <div class="form-container">
+        <h2>Add New Alumni</h2>
+        <form id="addAlumniForm">
+            <input class="NameInput" type="text" name="name" placeholder="Enter name">
+            <input class="DateInput" type="text" name="year" placeholder="Enter year">
+            <input class="QuoteInput" type="text" name="quote" placeholder="Enter quote">
+            <label class="custom-file-upload">
+                <input type="file" name="photo" accept="image/*">
+                Custom Upload
+            </label>
+            <input type="submit" value="Add Alumni">
+        </form>
+    </div>
+</body>
+
+</html>

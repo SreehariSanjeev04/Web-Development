@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('college.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 10px;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: black;
+    position: relative;
+}
+.form-box h1::after {
+    content: '';
+    display: block;
+    width: 60px; 
+    height: 2px; 
+    background-color: black;
+    margin: 10px auto; 
+}
+.input-field{
+    background-color: grey;
+    background: grey;
+    margin: 20px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 100%;
+    background: transparent;
+    padding: 18px 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.txt_field{
+    margin: 15px 0px;
+}
+.button {
+    width: 40%;
+}
+.button:hover{
+    background-color: black;
+    color: white; 
+}
